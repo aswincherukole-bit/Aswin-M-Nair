@@ -4,150 +4,204 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Aswin M Nair | Digital Marketing Portfolio Kerala</title>
+<title>Aswin M Nair | Digital Marketing Portfolio</title>
 
-<meta name="description" content="Digital Marketing Portfolio of Aswin M Nair, specializing in social media marketing, campaign strategy, and brand growth.">
-<meta name="keywords" content="Digital Marketing Kerala, Social Media Marketing, Marketing Portfolio India">
-<meta name="author" content="Aswin M Nair">
-
-<link rel="canonical" href="https://yourusername.github.io/">
-
-<!-- Open Graph -->
-<meta property="og:title" content="Aswin M Nair Portfolio">
-<meta property="og:description" content="Digital marketing portfolio with real results.">
-<meta property="og:image" content="https://yourusername.github.io/preview.jpg">
-<meta property="og:url" content="https://yourusername.github.io/">
-<meta property="og:type" content="website">
-
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* PREMIUM UI */
+/* ROOT COLORS (GROWTH THEME) */
+:root {
+    --primary: #16a34a;
+    --secondary: #22c55e;
+    --accent: #4ade80;
+    --dark: #022c22;
+    --light: #ecfdf5;
+}
+
+/* BODY */
 body {
-margin:0;
-font-family:'Open Sans', sans-serif;
-background: radial-gradient(circle at top, #1e293b, #020617);
-color:#e2e8f0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #022c22, #052e16);
+    color: white;
+    overflow-x: hidden;
 }
 
-header {
-text-align:center;
-padding:100px 20px;
-background: linear-gradient(135deg,#6366f1,#06b6d4);
+/* HERO SECTION */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    min-height: 100vh;
 }
 
-header h1 {
-font-family:'Poppins';
-font-size:48px;
-color:white;
+/* TEXT */
+.hero-text {
+    max-width: 500px;
+    animation: slideUp 1s ease;
 }
 
-header p {
-color:#e0f2fe;
+.hero-text h1 {
+    font-size: 48px;
 }
 
-.container {
-width:90%;
-max-width:1100px;
-margin:auto;
-padding:50px 0;
+.hero-text span {
+    color: var(--accent);
 }
 
+.hero-text p {
+    opacity: 0.8;
+}
+
+/* IMAGE */
+.hero-img img {
+    width: 320px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(34,197,94,0.4);
+    animation: float 4s ease-in-out infinite;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* SECTION */
 section {
-margin-bottom:60px;
+    padding: 80px 10%;
 }
 
-h2 {
-font-family:'Poppins';
-margin-bottom:15px;
-}
-
+/* CARDS */
 .card {
-background: rgba(255,255,255,0.05);
-backdrop-filter: blur(10px);
-padding:20px;
-border-radius:12px;
-margin-bottom:20px;
-transition:0.3s;
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
 }
 
 .card:hover {
-transform:translateY(-5px);
-box-shadow:0 10px 30px rgba(99,102,241,0.3);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(34,197,94,0.3);
 }
 
-.highlight {
-color:#38bdf8;
-font-weight:bold;
+/* SKILLS */
+.skills span {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    background: rgba(34,197,94,0.2);
+    border-radius: 20px;
 }
 
-footer {
-text-align:center;
-padding:30px;
-background:#020617;
+/* ANIMATIONS */
+@keyframes slideUp {
+    from {opacity:0; transform:translateY(40px);}
+    to {opacity:1; transform:translateY(0);}
+}
+
+@keyframes float {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-15px);}
+    100% {transform: translateY(0);}
+}
+
+/* FADE ON SCROLL */
+.fade {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 </style>
-
 </head>
 
 <body>
 
-<header>
-<h1>Aswin M Nair</h1>
-<p>Digital Marketing Professional | ASAP Kerala</p>
-</header>
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-text">
+        <h1>Hi, I'm <span>Aswin</span></h1>
+        <p>Digital Marketing Professional focused on growth, branding, and strategy.</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </div>
 
-<div class="container">
+    <div class="hero-img">
+        <img src="profile.jpg" alt="Aswin Photo">
+    </div>
+</div>
 
-<section>
+<!-- ABOUT -->
+<section class="fade">
 <h2>About Me</h2>
 <div class="card">
 <p>
-Digital marketing professional specializing in social media growth, branding, and campaign strategy.
-Currently working as Project Fellow at ASAP Kerala.
+Project Fellow at ASAP Kerala specializing in digital marketing, community building, and campaign growth.
 </p>
 </div>
 </section>
 
-<section>
-<h2>Key Achievements</h2>
-<div class="card">
-<p>📈 Increased social media reach from <span class="highlight">2K to 30K views</span></p>
-<p>💰 Generated <span class="highlight">₹3.2 Crore revenue</span> through marketing initiatives</p>
-</div>
-</section>
-
-<section>
+<!-- PROJECTS -->
+<section id="projects" class="fade">
 <h2>Projects</h2>
 
 <div class="card">
 <h3>Rajagiri Events</h3>
-<p>Managed multiple event campaigns and increased engagement significantly.</p>
+<p>Increased reach from 2K to 30K views through strategic content marketing.</p>
 </div>
 
 <div class="card">
 <h3>ASAP Kerala</h3>
-<p>Built student communities and improved course enrollment.</p>
+<p>Generated ₹3.2 Crore revenue through marketing initiatives.</p>
 </div>
 
 <div class="card">
 <h3>Bougain Media</h3>
-<p>Handled social media marketing and content creation for clients.</p>
+<p>Handled digital marketing and content strategy for multiple clients.</p>
 </div>
 
 </section>
 
-<section>
+<!-- SKILLS -->
+<section class="fade">
 <h2>Skills</h2>
-<div class="card">
-<p>Social Media Marketing | Content Creation | Branding | Videography | Editing</p>
+<div class="skills">
+<span>Social Media Marketing</span>
+<span>Content Creation</span>
+<span>Videography</span>
+<span>Branding</span>
 </div>
 </section>
 
-<section>
+<!-- CONTACT -->
+<section class="fade">
 <h2>Contact</h2>
 <div class="card">
 <p>Email: aswincherukole@gmail.com</p>
@@ -155,26 +209,18 @@ Currently working as Project Fellow at ASAP Kerala.
 </div>
 </section>
 
-</div>
+<!-- SCRIPT -->
+<script>
+const faders = document.querySelectorAll('.fade');
 
-<footer>
-© 2026 Aswin M Nair
-</footer>
-
-<!-- SEO STRUCTURED DATA -->
-<script type="application/ld+json">
-{
-"@context": "https://schema.org",
-"@type": "Person",
-"name": "Aswin M Nair",
-"jobTitle": "Digital Marketing Professional",
-"url": "https://yourusername.github.io/",
-"email": "mailto:aswincherukole@gmail.com",
-"worksFor": {
-"@type": "Organization",
-"name": "ASAP Kerala"
-}
-}
+window.addEventListener('scroll', () => {
+    faders.forEach(el => {
+        const rect = el.getBoundingClientRect().top;
+        if(rect < window.innerHeight - 100){
+            el.classList.add('show');
+        }
+    });
+});
 </script>
 
 </body>
