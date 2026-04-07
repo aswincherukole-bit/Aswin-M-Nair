@@ -1,0 +1,204 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ROOT VARIABLES (COLOR SYSTEM) */
+:root {
+    --bg-dark: #0b1120;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --primary: #6366f1;
+    --secondary: #06b6d4;
+    --accent: #22c55e;
+    --text-main: #e2e8f0;
+    --text-muted: #94a3b8;
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* BODY */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: radial-gradient(circle at top, #1e293b, #020617);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 0;
+}
+
+/* HEADER (GLASS + GLOW) */
+header {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #6366f1, #06b6d4);
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255,255,255,0.1);
+    filter: blur(120px);
+    top: -100px;
+    right: -100px;
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 18px;
+    color: #e0f2fe;
+    margin-top: 10px;
+}
+
+/* SECTION TITLE */
+section {
+    margin-bottom: 80px;
+}
+
+section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+section h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+/* GLASS CARD */
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+/* HOVER EFFECT (PREMIUM) */
+.card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 10px 40px rgba(99, 102, 241, 0.3);
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* TEXT HIGHLIGHT */
+.highlight {
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+/* SKILLS (PILL UI) */
+.skills span {
+    display: inline-block;
+    padding: 10px 16px;
+    margin: 6px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid var(--glass-border);
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+/* SKILL HOVER */
+.skills span:hover {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* BUTTON (if you add later) */
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(6,182,212,0.4);
+}
+
+/* CONTACT */
+.card p {
+    margin-bottom: 8px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #020617;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeUp 0.8s ease forwards;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 34px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+}
